@@ -1,0 +1,15 @@
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="text">Tehtävä</label>
+    <input type="text" name="text" [(ngModel)]="text" id="text" placeholder="Lisää tehtävä" />
+  </div>
+  <div class="form-control">
+    <label for="day">Päivä ja Aika</label>
+    <input type="text" name="day" [(ngModel)]="day" id="day" placeholder="Lisää päivä ja aika" />
+  </div>
+  <div class="form-control form-control-check">
+    <label for="reminder">Aseta muistutus</label>
+    <input type="checkbox" name="reminder" [(ngModel)]="reminder" id="reminder" />
+  </div>
+  <input type="submit" value="Talleta Tehtävä" class="btn btn-block" />
+</form>
